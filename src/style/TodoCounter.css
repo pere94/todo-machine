@@ -1,0 +1,17 @@
+.counterTasks_title{
+    margin: 10px;
+    font-size: 50px;
+    font-weight: 900;
+    background: linear-gradient(120deg, rgba(2,0,36,1) 10%, rgba(0,212,255,1) 40%); 
+    background-clip: text;
+    color: transparent;
+    text-align: center;
+}
+
+.counterTasks_counter{
+    margin: 0px;
+    font-size: 30px;
+    font-weight: 900;
+    color: #142850;
+    text-align: center;
+}

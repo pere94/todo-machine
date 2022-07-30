@@ -1,0 +1,29 @@
+.labelTask{
+    font-size: 20px;
+    font-weight: bold;
+    color: #142850;
+}
+
+.createTask_input{
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 40px;
+    min-height: 40px;
+    text-indent: 10px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #05ccf9e5;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
+    background: rgb(29,51,75);
+    background: linear-gradient(120deg, rgba(29,51,75,1) 9%, rgba(0,212,255,1) 100%); 
+}
+
+.createTask_input:focus{
+    outline: none;
+}
+
+.createTask_input::placeholder{
+    color: rgb(219, 219, 219);
+}

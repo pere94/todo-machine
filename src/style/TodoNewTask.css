@@ -1,0 +1,9 @@
+.h2_NewTasks{
+    margin: 10px;
+    font-size: 30px;
+    font-weight: 900;
+    background: linear-gradient(120deg, rgba(2,0,36,1) 10%, rgba(0,212,255,1) 40%); 
+    background-clip: text;
+    color: transparent;
+    text-align: left;
+}

@@ -1,0 +1,32 @@
+.TodoList_container{
+    padding: 10px;
+    margin: 0px;
+    margin-top: 20px;
+    height: 250px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: light;
+    scrollbar-color: #142850 #e0e0e0;
+
+}
+
+.TodoList_container::-webkit-scrollbar{
+    width: 10px;
+}
+
+.TodoList_container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    
+}
+
+.TodoList_container::-webkit-scrollbar-thumb {
+    background-color: #142850;
+    outline: 1px solid #00A8CC;
+    border-radius: 10px;
+}
+
+
+.TodoList_list{
+    padding: 0px;
+    margin: 0px;
+}

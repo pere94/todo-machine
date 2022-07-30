@@ -1,0 +1,21 @@
+.createTasks{
+    width: 150px;
+    margin-top: 20px;
+    height: 40px;
+    min-height: 40px;
+    font-size: 16px;
+    background-color: #00A8CC;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+    background: rgb(29,51,75);
+    background: linear-gradient(120deg, rgba(29,51,75,1) 9%, rgba(0,212,255,1) 100%); 
+    cursor: pointer;
+}
+
+.createTasks:hover{
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.9);
+    scale: 0.95;
+
+}
