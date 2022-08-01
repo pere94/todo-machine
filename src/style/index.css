@@ -65,7 +65,7 @@ code {
     height: 100vh;
     position: absolute;
     z-index: 2; 
-    /* visibility: visible; */
+    visibility: hidden;
   }
 
 }

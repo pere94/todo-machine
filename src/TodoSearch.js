@@ -13,7 +13,7 @@ function TodoSearch() {
     return (
         <div 
          className='label_searchTask'
-         style={{background: `linear-gradient(100deg, rgba(0,212,255,1) ${Math.round(completedTodos/totalTodos*100)}%, rgba(29,51,75,1) ${Math.round(completedTodos/totalTodos*100+1)}%`}}
+         style={{background: `linear-gradient(100deg, rgba(0,212,255,1) ${Math.round(completedTodos/totalTodos*100)}%, rgba(29,51,75,1) ${Math.round(completedTodos/totalTodos*100+10)}%`}}
          >
             <input 
                 type='text' 

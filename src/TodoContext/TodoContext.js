@@ -55,7 +55,7 @@ function TodoProvider(props) {
         saveTodos(newTodos);
       };
 
-      const [visibPopup, setvisibPopup] = React.useState(false);
+      const [visibPopup, setvisibPopup] = React.useState(true);
 
       function visibilityPopup() {
         const popup = document.getElementById('PopupNew');

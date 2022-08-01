@@ -1,5 +1,6 @@
 import React from 'react';
 import './style/TodoItem.css';
+import { FaWindowClose } from "react-icons/fa";
 
 function TodoItem(props) {
 
@@ -12,11 +13,16 @@ function TodoItem(props) {
                 onChange={props.ischeked}
             />
             <p className={`todoChecktasksLabel ${props.completed && 'check_active'}`}>{props.text}</p>
-            <span 
+            {/* <span 
                 className="todoChecktasksClose"
                 onClick={props.isdeleted}
-            >X</span>
+            >X</span> */}
+            <span 
+                onClick={props.isdeleted}
+            > <FaWindowClose className="todoChecktasksClose"/> </span>
+            
         </li>
+
     );
 }
 

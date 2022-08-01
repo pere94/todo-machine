@@ -1,0 +1,75 @@
+.Loading_todoChecktasksContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    padding: 10px;
+    list-style: none;
+    background-color: rgb(246, 246, 246);
+    border-radius: 5px;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 310px;
+    height: 38px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1), rgb(200, 199, 199));
+    background-size: 400% 400%;
+    animation: loadingAnimation 2s ease-in-out infinite;
+}
+
+@keyframes loadingAnimation{
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.Loading_todoChecktasks{
+    margin: 0px;
+    width: 20px;
+    height: 15px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 3px solid rgb(229, 229, 229);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.Loading_todoChecktasksLabel{
+    margin: 0px;
+    vertical-align: middle;
+    width: 100%;
+    max-width: 500px;
+}
+
+.Loading_todoChecktasksClose{
+    margin: 0px;
+    width: 30px;
+    height: 25px;
+    background-color: rgb(229, 229, 229);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    position: relative;
+    right: -15px;
+}
+
+
+@media (max-width: 670px) {
+  
+    .Loading_todoChecktasksLabel{
+        max-width: 480px;
+        overflow-x: scroll;
+        padding-bottom: 8px;
+
+    }
+  
+}

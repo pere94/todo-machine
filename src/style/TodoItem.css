@@ -47,8 +47,8 @@
 .todoChecktasksClose{
     margin: 0px;
     width: 30px;
-    height: 25px;
-    background-color: rgb(255, 200, 200);
+    height: 35px;
+    /* background-color: rgb(255, 200, 200); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,10 +56,11 @@
     position: relative;
     right: -15px;
     cursor: pointer;
+    fill: rgb(255, 200, 200);
 }
 
 .todoChecktasksClose:hover{
-    background-color: rgb(255, 125, 125);
+    fill: rgb(255, 125, 125);
 }
 
 .check_active{

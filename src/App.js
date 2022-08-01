@@ -14,6 +14,10 @@ import  { TodoContext } from './TodoContext/TodoContext';
 import { TodoProvider } from './TodoContext/TodoContext';
 import { PopupNewTodo } from '../src/popupNewTodo/popupNewTodo';
 
+import { TodoError } from './TodoError';
+import { TodoLoading } from './TodoLoading';
+import { TodoEmpty } from './TodoEmpty';
+
 
 function App() {
   // const { error, loading, searchedTodos, TodoFinished, TodoDeleted, } = React.useContext(TodoContext);
@@ -42,8 +46,9 @@ function App() {
               {({error, loading, searchedTodos, TodoFinished, TodoDeleted, visibilityPopup,}) => (
                 <React.Fragment>
                 <TodoList>
-                  {error && <p>Ha ocurrido un error al cargar los datos</p>}
-                  {loading && <p>Estamos cargando los datos</p>}
+                  {error && <TodoError error={error} />}
+                  {loading && <TodoLoading />}
+                  {(!loading && !searchedTodos.length) && <TodoEmpty />}
                 
                   {searchedTodos.map( todo => (
                     <TodoItem 
