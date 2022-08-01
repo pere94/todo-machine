@@ -36,6 +36,12 @@
     margin: 0px;
     vertical-align: middle;
     width: 100%;
+    max-width: 500px;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: light;
+    scrollbar-color: #142850 #e0e0e0;
+    padding-bottom: 8px;
 }
 
 .todoChecktasksClose{
@@ -55,3 +61,22 @@
 .todoChecktasksClose:hover{
     background-color: rgb(255, 125, 125);
 }
+
+.check_active{
+    text-decoration: line-through;
+}
+
+
+
+@media (max-width: 670px) {
+  
+    .todoChecktasksLabel{
+        max-width: 480px;
+        overflow-x: scroll;
+        padding-bottom: 8px;
+
+    }
+  
+}
+
+

@@ -1,5 +1,7 @@
 body {
   /* box-sizing: border-box; */
+  width: 100vw;
+  height: 100vh;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -21,7 +23,7 @@ code {
     monospace;
 }
 
-main{
+.root{
   width: 95%;
   max-width: 1200px;
   display: flex;
@@ -30,4 +32,40 @@ main{
   gap: 2%;
   padding: 2%;
   
+}
+
+.PopupNew{
+  display: none;
+}
+
+
+
+@media (max-width: 670px) {
+  
+  body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0;
+  }
+
+  .root{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 0;
+  }
+
+  .PopupNew{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 2; 
+    /* visibility: visible; */
+  }
+
 }

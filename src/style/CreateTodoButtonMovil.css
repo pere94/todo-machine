@@ -1,0 +1,36 @@
+.createTasksMovil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 5;
+    bottom: 15px;
+    right: 15px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    font-size: 40px;
+    font-weight: bolder;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.5);
+    background: rgb(29,51,75);
+    background: linear-gradient(120deg, rgba(29,51,75,1) 9%, rgba(0,212,255,1) 100%); 
+    cursor: pointer;
+
+    transform: rotate(0);
+    transition: .3s ease;
+}
+
+.createTasksMovil:hover{
+    transform: rotate(224deg);
+}
+
+
+@media (min-width: 670px) {
+  
+    .createTasksMovil{
+        display: none;
+    }
+
+  }

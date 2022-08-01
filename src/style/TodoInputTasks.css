@@ -2,14 +2,18 @@
     font-size: 20px;
     font-weight: bold;
     color: #142850;
+    
 }
 
 .createTask_input{
     display: flex;
     align-items: center;
     color: white;
-    height: 40px;
+    height: 80px;
+    width: 100%;
     min-height: 40px;
+    max-height: 80px;
+    max-width: 100%;
     text-indent: 10px;
     font-size: 15px;
     border: none;
@@ -26,4 +30,19 @@
 
 .createTask_input::placeholder{
     color: rgb(219, 219, 219);
+}
+
+@media (max-width: 670px) {
+
+    .createTask_input{
+        width: 100%;
+        height: 80px;
+        min-height: 40px;
+        max-height: 150px;
+
+    }
+
+    .formTodoAdd{
+        width: 100%;
+    }
 }

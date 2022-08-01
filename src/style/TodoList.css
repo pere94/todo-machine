@@ -7,7 +7,6 @@
     scrollbar-width: thin;
     scrollbar-color: light;
     scrollbar-color: #142850 #e0e0e0;
-
 }
 
 .TodoList_container::-webkit-scrollbar{
@@ -29,4 +28,16 @@
 .TodoList_list{
     padding: 0px;
     margin: 0px;
+}
+
+
+
+
+@media (max-width: 670px) {
+  
+    .TodoList_container{
+        height: 100%; 
+        padding: 10%;  
+    }
+  
 }

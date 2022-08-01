@@ -7,3 +7,14 @@
     color: transparent;
     text-align: left;
 }
+
+
+
+@media (max-width: 670px) {
+  
+    .h2_NewTasks{
+        font-size: 40px;
+        text-align: center;
+    }
+  
+}
