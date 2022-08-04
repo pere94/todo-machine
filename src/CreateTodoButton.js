@@ -1,10 +1,8 @@
 import React from 'react';
 import './style/CreateTodoButton.css';
-import { TodoContext } from './TodoContext/TodoContext';
 
-function CreateTodoButton() {
+function CreateTodoButton( {newTodoValue, TodoAdd} ) {
 
-    const { newTodoValue, TodoAdd} = React.useContext(TodoContext);
 
     return (
         <button 

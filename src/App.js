@@ -1,6 +1,4 @@
 import React from 'react';
-import './style/App.css';
-import img_grande from './img/1902.i039.011.P.m004.c30.cloud services isometric icons-04.webp';
 
 import { TodoNewTask } from './TodoNewTask';
 import { TodoInputTasks } from './TodoInputTasks';
@@ -10,80 +8,107 @@ import { TodoSearch } from './TodoSearch';
 import { TodoItem } from './TodoItem';
 import { TodoList } from './TodoList';
 import { CreateTodoButtonMovil } from './CreateTodoButtonMovil';
-import  { TodoContext } from './TodoContext/TodoContext';
-import { TodoProvider } from './TodoContext/TodoContext';
+import  { useTodos } from './TodoContext/useTodos';
 import { PopupNewTodo } from '../src/popupNewTodo/popupNewTodo';
-
 import { TodoError } from './TodoError';
 import { TodoLoading } from './TodoLoading';
 import { TodoEmpty } from './TodoEmpty';
+import { TodoContainerLeft } from './TodoContainerLeft/TodoContainerLeft';
+import { TodoContainerRight } from './TodoContainerRight/TodoContainerRight';
+import { PopupNewTodoContainer } from './PopupNewTodoContainer/PopupNewTodoContainer';
 
 
 function App() {
   // const { error, loading, searchedTodos, TodoFinished, TodoDeleted, } = React.useContext(TodoContext);
-  
+  {/* {(value -> valores del contexto globales) => (componentes que usan las variables)} */}
+
+  const {
+    loading,
+    error,
+    totalTodos,
+    completedTodos,
+    searchValue,
+    setSearchValue,
+    searchedTodos,
+    TodoFinished,
+    TodoDeleted,
+    visibilityPopup,
+    TodoAdd,
+    onChangeTextarea,
+    newTodoValue,
+} = useTodos();
 
   return (
+    <React.Fragment>
+      <TodoContainerLeft>
+        <TodoNewTask />
+        <TodoInputTasks
+          newTodoValue = {newTodoValue} 
+          onChangeTextarea = {onChangeTextarea}
+          loading = {loading}
+        />
+        <CreateTodoButton 
+          newTodoValue = {newTodoValue} 
+          TodoAdd = {TodoAdd}
+        />
+      </TodoContainerLeft>
 
-    <TodoProvider> 
-      <React.Fragment>
-        {
-          <section className="container_left">
-            <TodoNewTask />
-            <TodoInputTasks />
-            <CreateTodoButton />
-            <img className="img_grande" src={img_grande} alt="hola"/>
-          </section>
-        }
+      <TodoContainerRight>
+        <TodoCounter 
+          completedTodos = {completedTodos}
+          totalTodos = {totalTodos}
+        />
 
-        {
-          <section className="container_right">
-            <TodoCounter />
-            <TodoSearch />
+        <TodoSearch 
+          searchValue = {searchValue}
+          setSearchValue = {setSearchValue} 
+          completedTodos = {completedTodos} 
+          totalTodos = {totalTodos}
+        />
+            
+        <TodoList
+          totalTodos = {totalTodos}
+          searchText = {searchValue}
+          error = {error}
+          loading = {loading}
+          searchedTodos = {searchedTodos}
+          onError = {() => <TodoError />}
+          onLoading = {() => <TodoLoading />}
+          onEmptyTodos = {() => <TodoEmpty />}
+          onEmptySearchedTodos = {text => <p>Oh! There are no Tasks matching the "{text}" search.</p>}
+          render = {todo => (
+            <TodoItem 
+              completed={todo.completed} 
+              key={todo.text} 
+              text={todo.text}
+              ischeked={() => TodoFinished(todo.text)}
+              isdeleted={() => TodoDeleted(todo.text)}
+            />)}
+        />
+      </TodoContainerRight>
+      
+      <PopupNewTodo>
+        <PopupNewTodoContainer
+          visibilityPopup= {visibilityPopup}
+        >
+          <TodoNewTask />
+          <TodoInputTasks 
+            newTodoValue = {newTodoValue} 
+            onChangeTextarea = {onChangeTextarea}
+          />
+          <CreateTodoButton 
+            newTodoValue = {newTodoValue} 
+            TodoAdd = {TodoAdd}
+          />
+        </PopupNewTodoContainer>
+        
+      </PopupNewTodo> 
 
-            <TodoContext.Consumer>
-              {/* {(value -> valores del contexto globales) => (componentes que usan las variables)} */}
-              {({error, loading, searchedTodos, TodoFinished, TodoDeleted, visibilityPopup,}) => (
-                <React.Fragment>
-                <TodoList>
-                  {error && <TodoError error={error} />}
-                  {loading && <TodoLoading />}
-                  {(!loading && !searchedTodos.length) && <TodoEmpty />}
-                
-                  {searchedTodos.map( todo => (
-                    <TodoItem 
-                      completed={todo.completed} 
-                      key={todo.text} 
-                      text={todo.text}
-                      ischeked={() => TodoFinished(todo.text)}
-                      isdeleted={() => TodoDeleted(todo.text)}
-                    />
-                  ))}
-                </TodoList>
+      <CreateTodoButtonMovil 
+        visibilityPopup = {visibilityPopup}
+      />
 
-                <PopupNewTodo>
-                {
-                  <section className="container_PopupNewTodo"> {/*${!!isActive && "PopupHidden"}`*/}
-                    <span onClick={visibilityPopup} className="closePopup">X</span>
-                    <TodoNewTask />
-                    <TodoInputTasks />
-                    <CreateTodoButton />
-                    <img className="img_grande" src={img_grande} alt="hola"/>
-                  </section>
-                }
-                </PopupNewTodo>
-                </React.Fragment>  
-              )}
-
-            </TodoContext.Consumer>
-          </section>
-        }
-
-        <CreateTodoButtonMovil />
-
-      </React.Fragment>
-    </TodoProvider>
-
+    </React.Fragment>
     
   );
 }

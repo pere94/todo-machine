@@ -1,10 +1,10 @@
 import React from 'react';
 import './style/TodoInputTasks.css'
-import { TodoContext } from './TodoContext/TodoContext';
+// import { TodoContext } from './TodoContext/useTodos';
 
-function TodoInputTasks() {
+function TodoInputTasks( { newTodoValue, onChangeTextarea, loading } ) {
 
-    const { newTodoValue, onChangeTextarea } = React.useContext(TodoContext);
+    // const { newTodoValue, onChangeTextarea } = React.useContext(TodoContext);
 
     return (
         <React.Fragment>
@@ -17,6 +17,7 @@ function TodoInputTasks() {
                     className='createTask_input' 
                     type="text" 
                     placeholder='Type your task here' 
+                    disabled={loading}
                 />
             </form>
             

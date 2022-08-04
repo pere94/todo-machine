@@ -28,6 +28,10 @@
     outline: none;
 }
 
+.createTask_input:disabled{
+    cursor: not-allowed;
+}
+
 .createTask_input::placeholder{
     color: rgb(219, 219, 219);
 }

@@ -1,0 +1,28 @@
+.container_right{
+    box-sizing: border-box;
+    background-color: white;
+    height: 550px;
+    width: 35%;
+    min-width: 320px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 670px) {
+
+    .container_right{
+      width: 100vw;
+      height: 100vh;
+      margin: 0px;
+      padding: 0px;
+      border-radius: 0px;
+    }
+  
+}

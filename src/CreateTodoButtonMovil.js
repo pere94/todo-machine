@@ -1,10 +1,9 @@
 import React from 'react';
 import './style/CreateTodoButtonMovil.css';
-import { TodoContext } from './TodoContext/TodoContext';
-import { FaWindowClose } from "react-icons/fa";
+// import { TodoContext } from './TodoContext/useTodos';
 
-function CreateTodoButtonMovil() {
-    const {visibilityPopup} = React.useContext(TodoContext);
+function CreateTodoButtonMovil({visibilityPopup}) {
+    // const {visibilityPopup} = React.useContext(TodoContext);
     
     return (
         <button onClick={visibilityPopup} className='createTasksMovil' id='createTasksMovil'>+</button>

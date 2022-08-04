@@ -27,7 +27,15 @@ function useLocalStorage(itemName, initialValue) {
         }
         
       }, 2000);
-    });
+    }, [()=> {
+          window.addEventListener('storage', change => {
+            if (change.key === 'TODOS_V1') {
+              return change.newValue;
+            } else {
+                return null;
+            }
+          });
+    }]);
     
     const saveItems = (newItem) =>{
       try {

@@ -1,0 +1,31 @@
+.img_grande{
+    width: 100%;
+    max-width: 200px;
+    place-self: center;
+    padding-top: 20px;
+}
+
+.container_left{
+    box-sizing: border-box;
+    background-color: white;
+    height: 550px;
+    width: 35%;
+    min-width: 320px;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 670px) {
+    
+    .container_left{
+      display: none;
+    }
+  
+  }
