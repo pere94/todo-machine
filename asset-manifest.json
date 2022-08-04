@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/todo-machine/static/css/main.1c0c1355.css",
-    "main.js": "/todo-machine/static/js/main.d8c93d7d.js",
+    "main.css": "/todo-machine/static/css/main.9064348f.css",
+    "main.js": "/todo-machine/static/js/main.776c3e56.js",
     "static/js/787.0494603e.chunk.js": "/todo-machine/static/js/787.0494603e.chunk.js",
     "static/media/1902.i039.011.P.m004.c30.cloud services isometric icons-04.webp": "/todo-machine/static/media/1902.i039.011.P.m004.c30.cloud services isometric icons-04.0da62d12f64feabd8cc2.webp",
     "index.html": "/todo-machine/index.html",
-    "main.1c0c1355.css.map": "/todo-machine/static/css/main.1c0c1355.css.map",
-    "main.d8c93d7d.js.map": "/todo-machine/static/js/main.d8c93d7d.js.map",
+    "main.9064348f.css.map": "/todo-machine/static/css/main.9064348f.css.map",
+    "main.776c3e56.js.map": "/todo-machine/static/js/main.776c3e56.js.map",
     "787.0494603e.chunk.js.map": "/todo-machine/static/js/787.0494603e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c0c1355.css",
-    "static/js/main.d8c93d7d.js"
+    "static/css/main.9064348f.css",
+    "static/js/main.776c3e56.js"
   ]
 }
